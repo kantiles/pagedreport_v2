@@ -1,0 +1,31 @@
+---
+title: "Pagedreport Example"
+execute:
+  echo: false
+format: 
+  pdf:
+    pdf-engine: pagedjs-cli
+    css: test.css
+filters:
+  - pagedreport
+pagedreport:
+  color: green
+  font: "Figtree"
+---
+
+## Heading
+
+Some text
+
+```{r}
+#| dev: 'svg'
+#| fig.width: 8
+#| fig.height: 4
+library(ggplot2)
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 4) +
+  theme_minimal()
+```
+
+Some text
