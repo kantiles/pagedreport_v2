@@ -1,31 +1,174 @@
 ---
 title: "Pagedreport Example"
 execute:
-  echo: false
+    echo: false
 format: 
   pdf:
     pdf-engine: pagedjs-cli
-    css: test.css
 filters:
   - pagedreport
 pagedreport:
   color: green
   font: "Figtree"
+  theme: "test"
 ---
 
-## Heading
+<!-- cover -->
+<article id="cover">
+<address>
+WeasyPrint
+26 rue Emile Decorps
+69100 Villeurbanne France
+</address>
+<address>
+contact@courtbouillon.org
+https://courtbouillon.org
+</address>
+</article>
 
-Some text
+<!-- table of contents -->
+<article id="contents">
+<h2>Table of contents</h2>
+<h3>Part one</h3>
+<ul>
+- <a href="#columns-title"></a>
+- <a href="#skills-title"></a>
+</ul>
 
-```{r}
-#| dev: 'svg'
-#| fig.width: 8
-#| fig.height: 4
-library(ggplot2)
+<h3>Part two</h3>
+<ul>
+- <a href="#offers-title"></a>
+- <a href="#chapter-title"></a>
+- <a href="#typography-title"></a>
+</ul>
+</article>
 
-ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
-  geom_point(size = 4) +
-  theme_minimal()
-```
+<!-- columns div -->
 
-Some text
+## Big title on left page, with text on columns
+
+### This is a little subtitle, here to explain what we are talking about
+
+:::columns_div
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat faucibus vestibulum. Mauris varius orci quam. Nam dui mauris, dictum at elementum at, mollis pulvinar est. Nunc lobortis pharetra erat, id rutrum lorem malesuada in.
+
+Phasellus id nisl nec arcu tempor ultricies non id tortor. Mauris ex nibh, viverra vitae nisi eget, placerat pharetra est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id maximus diam. Cras molestie nisl vitae iaculis convallis. Vivamus molestie vitae nisl sed interdum. Nunc aliquam massa rhoncus finibus convallis. Vivamus sed vulputate risus. Nunc dignissim magna velit, quis lobortis ex volutpat eget. Proin dictum mauris condimentum consequat faucibus.
+
+Duis maximus mauris ac purus eleifend, sit amet blandit nulla lacinia. Maecenas massa dolor, suscipit at erat eget, maximus dignissim dolor. Praesent consectetur maximus libero, eu facilisis ligula finibus et. Cras rhoncus eros sit amet lorem auctor, a efficitur leo tincidunt. Sed viverra interdum odio, eget pulvinar tortor blandit lacinia. Praesent consequat congue commodo. Phasellus eu massa feugiat, imperdiet nisi a, sagittis ipsum.
+
+Suspendisse et gravida nunc. Quisque at felis nisl. Nam eget efficitur nunc. Vivamus fermentum imperdiet massa, porttitor elementum mauris faucibus scelerisque. Pellentesque ut metus tortor. Fusce vulputate ex at turpis consectetur, in vestibulum odio placerat. Suspendisse tempor sapien rutrum, cursus sem a, tincidunt odio. Sed in consequat augue. Proin finibus felis neque, ac hendrerit lorem consequat nec.
+
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce quam mi, dapibus et augue sit amet, porttitor volutpat orci. Vestibulum ac ligula at justo placerat pulvinar vel non velit. Duis vel iaculis nibh, non tristique lectus. Phasellus vel ex bibendum, accumsan tellus a, commodo nisi.
+:::
+
+<!-- skills -->
+<article id="skills">
+## This is another big title, on a page full of work presentation
+
+### We present you some of WeasyPrint's features.
+
+<section id="table-content">
+#### Table of contents
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi ante, tincidunt quis vehicula
+sed, vehicula sed augue. Cras eget ante turpis.
+
+</section>
+
+<section id="heading">
+#### Heading titles and page counters
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi ante, tincidunt quis vehicula
+sed, vehicula sed augue. Cras eget ante turpis.
+
+</section>
+
+<section id="multi-columns">
+#### Multi-column text
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi ante, tincidunt quis vehicula
+sed, vehicula sed augue. Cras eget ante turpis.
+
+</section>
+
+<section id="internal-links">
+#### Internal links
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi ante, tincidunt quis vehicula
+sed, vehicula sed augue. Cras eget ante turpis.
+
+</section>
+
+<section id="style">
+#### Different page types
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi ante, tincidunt quis vehicula
+sed, vehicula sed augue. Cras eget ante turpis.
+
+</section>
+</article>
+
+<article id="offers">
+<h2 id="offers-title">Big title on the first right page</h2>
+
+<section>
+#### Offer #1
+€135
+
+- Lorem ipsum dolor sit amet.
+- Nullam at diam eget urna consequat.
+- Sed fringilla quam at augue semper aliquam.
+- Cras nec lacus eu turpis finibus vulputate.
+
+</section>
+
+<section>
+#### Offer #2
+€175
+
+- Lorem ipsum dolor sit amet.
+- Nullam at diam eget urna consequat.
+- Sed fringilla quam at augue semper aliquam.
+- Mauris viverra nulla vel semper mollis.
+- Nulla quis massa eu urna suscipit vehicula.
+- Curabitur a odio id risus pharetra iaculis.
+
+</section>
+
+<section>
+#### Offer #3
+€200
+
+- Lorem ipsum dolor sit amet.
+- Nullam at diam eget urna consequat.
+- Sed fringilla quam at augue semper aliquam.
+- Mauris viverra nulla vel semper mollis.
+- Cras nec lacus eu turpis finibus vulputate.
+- Nulla quis massa eu urna suscipit vehicula.
+- Curabitur a odio id risus pharetra iaculis.
+- Mauris viverra nulla vel semper mollis.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+</section>
+</article>
+
+<article id="chapter">
+<h2 id="chapter-title">This is a chapter of a new section</h2>
+</article>
+
+## About some typography features
+
+:::typography
+#### Italic and Bold Text
+
+Lorem ipsum dolor *sit amet, consectetur adipiscing elit.* Ut
+pulvinar dolor **ac orci finibus elementum. Praesent**
+sit amet ligula turpis.
+
+#### Small Caps Text
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar
+dolor ac orci finibus elementum.
+:::
+
