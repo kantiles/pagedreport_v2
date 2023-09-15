@@ -3,7 +3,8 @@ title: Untitled
 format:
   pagedreport-pdf:
     mainfont: "Figtree"
-    theme_paged2: true
+    theme: 
+      test2: true
 author: Thomas Vroylandt
 date: last-modified
 ---
