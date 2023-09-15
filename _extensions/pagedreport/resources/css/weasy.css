@@ -32,23 +32,18 @@
   @top-left { background: none; content: none }
   @top-center { content: none }
   @top-right { content: none }
+
 }
+
 @page:first {
-  background-image: url(report-cover.jpg);
+  background-image:  linear-gradient(grey, grey), url(_extensions/pagedreport/resources/css/report-cover.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover ;
   background-repeat: no-repeat;
-  @top-left-corner { width: 0cm;}
-  @left-top { width: 0cm;}
-  @left-center { width: 0cm;}
-  @left-bottom { width: 0cm;}
-  @bottom-left-corner { width: 0cm;}
-  @top-right-corner { width: 0cm;}
-  @right-top { width: 0cm;}
-  @right-center { width: 0cm;}
-  @right-bottom { width: 0cm;}
-  @bottom-ight-corner { width: 0cm;}
+  background-blend-mode: multiply;
+
 }
+
 @page chapter {
   background: #fbc847;
   margin: 0;
