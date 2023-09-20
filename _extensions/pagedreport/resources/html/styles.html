@@ -204,6 +204,34 @@ $endif$
     size: $if(pagesize)$$pagesize$$else$A4$endif$; 
 }
 
+/* ----- Sizes ----- */
+/* all sizes are made relatives */
+
+/* headers + cover */
+.subtitle, .author, .date {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* text */
+p,
+ul,
+ol, 
+a {
+    font-size: 1rem;
+}
+
 /* ----- Fonts ----- */
 $if(headerfont)$
 h1,
@@ -215,12 +243,73 @@ h5 {
 }
 $endif$
 
+/* ----- Setup first page ----- */
+
+@page:first {
+    margin: 0;
+    background: $if(cover)$$cover$$else$$maincolor$$endif$;
+    background-repeat: no-repeat;
+    background-position: 0cm 0cm;
+    background-size: cover;
+
+    /* init to none */
+    @top-left-corner {content: none;}
+    @top-left {content: none;}
+    @top-center {content: none;}
+    @top-right {content: none;}
+    @top-right-corner {content: none;}
+  
+    @left-top {content: none;}
+    @left-middle {content: none;}
+    @left-bottom {content: none;}
+  
+    @right-top {content: none;}
+    @right-middle {content: none;}
+    @right-bottom {content: none;}
+  
+    @bottom-left-corner {content: none;}
+    @bottom-left {content: none;}
+    @bottom-center {content: none;}
+    @bottom-right {content: none;}
+    @bottom-right-corner {content: none;}
+}
+
 /* ----- Setup back cover ----- */
 .back-cover {
     page: back-cover;
+    color: white;
+    padding-top: 15cm;
   }
 
+@page back-cover {
+    margin: 0;
+    background: $if(backcover)$$backcover$$else$$maincolor$$endif$;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
 
+    /* init to none */
+    @top-left-corner {content: none;}
+    @top-left {content: none;}
+    @top-center {content: none;}
+    @top-right {content: none;}
+    @top-right-corner {content: none;}
+  
+    @left-top {content: none;}
+    @left-middle {content: none;}
+    @left-bottom {content: none;}
+  
+    @right-top {content: none;}
+    @right-middle {content: none;}
+    @right-bottom {content: none;}
+  
+    @bottom-left-corner {content: none;}
+    @bottom-left {content: none;}
+    @bottom-center {content: none;}
+    @bottom-right {content: none;}
+    @bottom-right-corner {content: none;}
+}
+  
 /* ----- String variables ----- */
 h1.title {
   string-set: h1-title content(text);
@@ -262,12 +351,13 @@ caption {
 $endif$
 
 /* ----- Setting up CSS variables ----- */
+/* this avoid to repeat each Pandoc statement to pass to multiples CSS statements */
+
 :root{
     --running-title-width: 2.5in;
     --screen-pages-spacing: 5mm;
-    --main-color: $if(backgroundcolor)$$backgroundcolor$$else$#c78039$endif$;
-    --main-font: "Gelasio";
-    --header-font: "Inter";
+    --main-color: $if(maincolor)$$maincolor$$else$coral$endif$;
+    --secondary-color: $if(secondcolor)$$secondcolor$$else$lightblue$endif$;
 }
 
 /* ----- Adding external theme  ----- */

@@ -113,15 +113,6 @@
     }
   }
 
-/* ------------------------ Back Cover ---------------------- */
-@page back-cover {
-    margin: 0 0 0 0;
-    background-image: var(--back-cover), var(--back-cover-2);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 15cm 23cm, 0cm 0cm;
-    background-size: 3cm, cover;
-}
-
 /* ----------------------- Table of contents ----------------------- */
 .toc a {
   line-height: 30px;
@@ -192,18 +183,6 @@
   margin-left: 0%;
   color: var(--main-color);
   margin-top: 0%;
-}
-
-/* ------------------------ Fonts ---------------------------- */
-@import 'https://fonts.googleapis.com/css?family=Gelasio';
-@import 'https://fonts.googleapis.com/css?family=Inter';
-
-p, ul, a, ol {
-    font-family: var(--main-font);
-}
-
-h1, h2, h3, h4 {
-    font-family: var(--header-font);
 }
 
 /* ------------------------ Style ----------------------------- */

@@ -5,10 +5,22 @@ author: Thomas Vroylandt
 date: last-modified
 format:
   pagedreport-pdf:
-    mainfont: "Calibri"
-    headerfont: "Figtree"
     theme:
       windmill: true
+    maincolor: blue
+    seconcolor: green
+    mainfont: "Calibri"
+    headerfont: "Figtree"
+    fontsize: 14pt
+    maxwidth: 60em
+    logo: url(https://kantiles.com/wp-content/uploads/2023/04/logo_kantiles_dark_bg-1.png)
+    cover: red
+    backcover: red
+    backtext: >
+      This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+      Finally, be sure to remove this message!
+      This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want
+
 ---
 
 ## This is part 1 {-}

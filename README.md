@@ -1,8 +1,19 @@
 
 # pagedreport
 
+> License statement : now CC-BY-SA !
+
 ## How it works
 
+This is mainly three elements :
+
+- a YAML file that setup some defaults values
+- a custom HTML Pandoc template + partials (especially styles.html)
+- CSS templates
+
+Plus a documentation (below)
+
+This all works thanks to Pandoc `pdf-engine` that includes `weasyprint` and `pagedjs-cli`.
 
 ## Parameter list
 
@@ -10,11 +21,20 @@ List from : https://quarto.org/docs/reference/formats/pdf.html + some changes
 
 -> Make a list inside a table with parameter/default value/what it change/example
 
+### Theme
+
+Should be a true/false on the name
+
 ### Page size
 
 - `pagesize`: also works in landscape. Default to A4. Could be one of Letter (http://test.weasyprint.org/suite-css-page-3/chapter5/section2/) or measures
 
+Please note that size of elements aren't specifically adjusted for landscape mode so you would maybe have to change some things in the template
+
 ### Colors
+
+- `maincolor``
+- `secondcolor`
 
 ### Fonts
 
@@ -24,15 +44,23 @@ List from : https://quarto.org/docs/reference/formats/pdf.html + some changes
 
 ### Sizes
 
+- `fontsize`
+- `linestretch`
 
 ### Covers
 
-- `backcover`: true/false to set or not a back cover
+- `logo`
+- `cover`
+- `abstract`: abstract
+
+- `backcover`: color or path or false (or forget) to set or not a back cover
+- `includeback`: true/false
+- `backtext`; like abstract for the back
 
 ### Misc
 
 - `toc`: table of contents
-- `abstract`: abstract
+
 
 
 ## Modify images and logo
@@ -61,3 +89,7 @@ In the same spirit, you can make your logo white with :
 ```
 magick::image_colorize(my_logo, opacity = 100, color = "white")
 ```
+
+## How it will evolve
+
+

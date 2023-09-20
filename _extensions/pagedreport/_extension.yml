@@ -7,7 +7,7 @@ contributes:
     pdf:
       toc: false
       pagesize: A4
-      backcover: true
+      includeback: true
       template: resources/html/template.html
       pdf-engine: weasyprint
 
