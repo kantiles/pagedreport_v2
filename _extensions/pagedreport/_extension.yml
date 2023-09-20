@@ -7,6 +7,6 @@ contributes:
     pdf:
       toc: true
       template: resources/html/template.html
-      pdf-engine: pagedjs-cli
+      pdf-engine: weasyprint
 
 

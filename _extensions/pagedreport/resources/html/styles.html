@@ -18,8 +18,7 @@ html {
     $endif$
 
     color: $if(fontcolor)$$fontcolor$$else$#1a1a1a$endif$;
-    background-color: $if(backgroundcolor)$$backgroundcolor$$else$#fdfdfd$endif$;
-    background-color: $if(backgroundcolor)$$backgroundcolor$$else$white$endif$;
+    background-color: $if(backgroundcolor)$$backgroundcolor$$else$transparent$endif$;
 }
 
 body {
@@ -31,9 +30,7 @@ body {
     padding-bottom: $if(margin-bottom)$$margin-bottom$$else$50px$endif$;
     hyphens: auto;
     overflow-wrap: break-word;
-    text-rendering: optimizeLegibility;
     font-kerning: normal;
-    background-color: transparent;
     color: black;
     font-size: 12pt;
 }
@@ -150,7 +147,6 @@ table {
     margin: 1em 0;
     border-collapse: collapse;
     width: 100%;
-    overflow-x: auto;
     display: block;
     font-variant-numeric: lining-nums tabular-nums;
 }
@@ -189,8 +185,8 @@ header {
 
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex;}
+div.column{flex: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -215,13 +211,13 @@ h1.title {
 /* ----- CSS Fragmentation ----- */
 /* page breaks; aka CSS fragmentation */
 .level1 {
-break-before: page;
+    break-before: page;
 }
 
 .section > h1, .section > h2, .section > h3, .section > h4, .section > h5, .section > h6 {
     break-after: avoid;
 }
-.footenotes {
+.footnotes {
     break-before: always;
     break-after: always;
 }

@@ -4,138 +4,137 @@
 
 /* -------------------- CSS variables ---------------------- */
 :root {
-    --running-title-width: 2.5in;
-    --screen-pages-spacing: 5mm;
-    --main-color: #c78039;
-    --main-font: "Gelasio";
-    --header-font: "Inter";
-  }
+  --running-title-width: 2.5in;
+  --screen-pages-spacing: 5mm;
+  --main-color: #c78039;
+  --main-font: "Gelasio";
+  --header-font: "Inter";
+}
 
 /* ------------------------ Pages -------------------------- */
 /* page size */
 @page {
-    size: 210mm 297mm;
-  }
+  size: 210mm 297mm;
+}
 
 /* normal page */
 @page {
+  margin: 1cm;
+  padding: .5cm;
 
   @top-left-corner {
     content: "";
-    border-bottom: 5px solid var(--main-color);
-    margin-bottom: 0.7cm;
+    border-bottom: 5px solid blue;
   }
 
   @top-left {
     content: string(h1-title);
-    font-family: "Inter";
     font-weight: bold;
     color: var(--main-color);
-    border-bottom: 5px solid var(--main-color);
-    margin-bottom: 0.7cm;
-  }
-
-  @top-center {
-    content: "";
-    border-bottom: 5px solid var(--main-color);
-    margin-bottom: 0.7cm;
+    border-bottom: 5px solid blue;
+    width: 20cm;
+    padding-left: 1.5cm;
   }
 
   @top-right {
     content: string(h1-text);
-    font-family: "Inter";
     color: var(--main-color);
-    border-bottom: 5px solid var(--main-color);
-    margin-bottom: 0.7cm;
+    border-bottom: 5px solid blue;
   }
 
   @top-right-corner {
     content: "";
-    border-bottom: 5px solid var(--main-color);
-    margin-bottom: 0.7cm;
+    border-bottom: 5px solid blue;
   }
 }
 
 /* counter */
-@page:left {
+@page: left {
 
-    /* numbering */
-    @bottom-right {
-        content: counter(page);
-        color: var(--main-color);
-        border: 5px solid var(--main-color);
-        margin-left: 15cm;
-        margin-right: -3cm;
-        padding-left: 1cm;
-        padding-right: 3cm;
-        margin-bottom: 1cm;
-        font-size: 14pt;
-        font-weight: bold;
-    }
+  /* numbering */
+  @bottom-right {
+    content: counter(page);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    margin-left: 15cm;
+    margin-right: -3cm;
+    padding-left: 1cm;
+    padding-right: 3cm;
+    margin-bottom: 1cm;
+    font-size: 14pt;
+    font-weight: bold;
+  }
 }
 
-@page:right {
+@page: right {
 
-    /* numbering */
-    @bottom-left {
-      content: counter(page);
-      color: var(--main-color);
-      border: 5px solid var(--main-color);
-      margin-right: 15cm;
-      margin-left: -3cm;
-      padding-right: 1cm;
-      padding-left: 3cm;
-      margin-bottom: 1cm;
-      font-size: 14pt;
-      font-weight: bold;
-    }
+  /* numbering */
+  @bottom-left {
+    content: counter(page);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    margin-right: 15cm;
+    margin-left: -3cm;
+    padding-right: 1cm;
+    padding-left: 3cm;
+    margin-bottom: 1cm;
+    font-size: 14pt;
+    font-weight: bold;
+  }
 }
 
 /* ------------------------ Front Cover --------------------- */
-@page:first{
-    background-color: #ffffff;
-    background-image: var(--front-cover), var(--front-cover-2);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 15cm 23cm, 0cm 0cm;
-    background-size: 4cm, cover;
+@page: first {
+  background-color: red;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 15cm 23cm, 0cm 0cm;
+  background-size: 4cm, cover;
 
-    @top-left-corner {
-      display: none;
-    }
+  @top-left-corner {content: none;}
+  @top-left {content: none;}
+  @top-center {content: none;}
+  @top-right {content: none;}
+  @top-right-corner {content: none;}
+  @bottom-right {content: none;}
+  @bottom-left {content: none;}
+}
 
-    @top-left {
-      display: none;
-    }
+.title,
+.subtitle,
+.author,
+.date {
+  color: #ffffff;
+}
 
-    @top-center {
-      display: none;
-    }
+/* headers */
+.title {
+  font-size: 50pt;
+  margin-right: 15%;
+  font-weight: 700;
+}
 
-    @top-right {
-      display: none;
-    }
+.subtitle {
+  margin-right: 15%;
+  font-size: 25pt;
+}
 
-    @top-right-corner {
-      display: none;
-    }
+.author {
+  margin-top: 70%;
+  font-size: 25pt;
+}
 
-    @bottom-right {
-      display: none;
-    }
-
-    @bottom-left {
-      display: none;
-    }
-  }
+.date {
+  font-size: 25pt;
+}
 
 /* ------------------------ Back Cover ---------------------- */
 @page back-cover {
-    margin: 0 0 0 0;
-    background-color: var(--main-color);
-    background-image: var(--back-cover);
-    background-repeat: no-repeat;
-    background-position: 15cm 23cm;
-    background-size: 4cm;
+  margin: 0 0 0 0;
+  background-color: var(--main-color);
+  background-image: var(--back-cover);
+  background-repeat: no-repeat;
+  background-position: 15cm 23cm;
+  background-size: 4cm;
 }
 
 .back-cover {
@@ -146,44 +145,30 @@
 @import 'https://fonts.googleapis.com/css?family=Gelasio';
 @import 'https://fonts.googleapis.com/css?family=Inter';
 
-p, ul, a, ol {
+p,
+ul,
+a,
+ol {
   font-family: var(--main-font);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--header-font);
 }
 
 /* ------------------------ Style ----------------------------- */
 /* colors */
-h1, h2, h3, h4 {
-    color: var(--main-color)
+h1,
+h2,
+h3,
+h4 {
+  color: var(--main-color)
 }
 
-h1.title, h1.subtitle, h2.author, h2.date {
-    color: #ffffff;
-}
 
-/* headers */
-h1.title {
-  font-size: 50pt;
-  margin-right: 15%;
-  font-weight: 700;
-}
-
-h1.subtitle {
-  margin-right: 15%;
-  font-size: 25pt;
-}
-
-h2.author {
-  margin-top: 70%;
-  font-size: 25pt;
-}
-
-h2.date {
-  font-size: 25pt;
-}
 
 /* normal headers */
 h1 {
@@ -195,6 +180,8 @@ h2 {
 }
 
 /* text */
-p, ul, ol {
+p,
+ul,
+ol {
   margin-right: 15%;
 }
