@@ -10,5 +10,7 @@ contributes:
       includeback: true
       template: resources/html/template.html
       pdf-engine: weasyprint
+      execute:
+        fig-format: 'svg'
 
 
