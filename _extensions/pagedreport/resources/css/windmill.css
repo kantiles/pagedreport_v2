@@ -6,32 +6,31 @@
 :root {
   --running-title-width: 2.5in;
   --screen-pages-spacing: 5mm;
-  --main-color: #c78039;
+  --main-color: $if(backgroundcolor)$$backgroundcolor$$else$#c78039$endif$;
   --main-font: "Gelasio";
   --header-font: "Inter";
 }
 
 /* ------------------------ Pages -------------------------- */
 /* page size */
-@page {
-  size: 210mm 297mm;
-}
-
 /* normal page */
 @page {
   margin: 1cm;
-  padding: .5cm;
+  padding-top: .5cm;
+  padding-bottom: .5cm;
 
   @top-left-corner {
     content: "";
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid;
+    border-bottom-color: var(--main-color);
   }
 
   @top-left {
     content: string(h1-title);
     font-weight: bold;
     color: var(--main-color);
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid;
+    border-bottom-color: var(--main-color);
     width: 15cm;
     padding-left: 1.5cm;
   }
@@ -39,13 +38,15 @@
   @top-right {
     content: string(h2-text);
     color: var(--main-color);
-    border-bottom: 5px solid blue;
-    width: 6cm;
+    border-bottom: 5px solid;
+    border-bottom-color: var(--main-color);
+    width: 8cm;
   }
 
   @top-right-corner {
     content: "";
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid;
+    border-bottom-color: var(--main-color);
   }
 }
 
@@ -71,7 +72,7 @@
   /* numbering */
   @bottom-left {
     content: counter(page);
-    color: var(--main-color);
+    color: $if(backgroundcolor)$$backgroundcolor$$else$red$endif$;
     margin-right: 15cm;
     margin-left: -3cm;
     padding-right: 1cm;
@@ -131,7 +132,6 @@
 @page back-cover {
   margin: 0 0 0 0;
   background-color: var(--main-color);
-  background-image: var(--back-cover);
   background-repeat: no-repeat;
   background-position: 15cm 23cm;
   background-size: 4cm;

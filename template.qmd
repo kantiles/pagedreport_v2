@@ -8,6 +8,7 @@ format:
     mainfont: "Figtree"
     toc: false
     backcover: true
+    pagesize: A4
     theme:
       windmill: true
 ---

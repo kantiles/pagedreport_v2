@@ -199,6 +199,11 @@ $if(quotes)$
 q { quotes: "“" "”" "‘" "’"; }
 $endif$
 
+/* ----- Page size ----- */
+@page {
+    size: $if(pagesize)$$pagesize$$else$A4$endif$; 
+}
+
 /* ----- Setup back cover ----- */
 .back-cover {
     page: back-cover;
@@ -244,6 +249,11 @@ caption {
 }
 
 $endif$
+
+/* ----- Setting up CSS variables ----- */
+:root{
+    
+}
 
 /* ----- Adding external theme  ----- */
 $if(theme.weasy)$
