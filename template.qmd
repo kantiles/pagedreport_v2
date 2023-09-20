@@ -5,10 +5,8 @@ author: Thomas Vroylandt
 date: last-modified
 format:
   pagedreport-pdf:
-    mainfont: "Figtree"
-    toc: false
-    backcover: true
-    pagesize: A4
+    mainfont: "Calibri"
+    headerfont: "Figtree"
     theme:
       windmill: true
 ---

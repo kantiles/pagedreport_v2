@@ -2,15 +2,6 @@
 /* CSS template for paged grid */
 /* --------------------------------- */
 
-/* -------------------- CSS variables ---------------------- */
-:root {
-    --running-title-width: 2.5in;
-    --screen-pages-spacing: 5mm;
-    --main-color: #0F579F;
-    --main-font: "Gelasio";
-    --header-font: "Inter";
-  }
-
 /* ------------------------ Pages -------------------------- */
 /* page size */
 @page {

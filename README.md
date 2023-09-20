@@ -1,7 +1,38 @@
 
 # pagedreport
 
+## How it works
 
+
+## Parameter list
+
+List from : https://quarto.org/docs/reference/formats/pdf.html + some changes
+
+-> Make a list inside a table with parameter/default value/what it change/example
+
+### Page size
+
+- `pagesize`: also works in landscape. Default to A4. Could be one of Letter (http://test.weasyprint.org/suite-css-page-3/chapter5/section2/) or measures
+
+### Colors
+
+### Fonts
+
+- `mainfont`: for everything. If no value this is the default system font.
+- `headerfont`: for header (from `h1` to `h5`) if not specified this takes `mainfont` value
+
+
+### Sizes
+
+
+### Covers
+
+- `backcover`: true/false to set or not a back cover
+
+### Misc
+
+- `toc`: table of contents
+- `abstract`: abstract
 
 
 ## Modify images and logo

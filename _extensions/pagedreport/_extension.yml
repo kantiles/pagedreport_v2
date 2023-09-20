@@ -5,7 +5,9 @@ quarto-required: ">=1.4.0"
 contributes:
   formats:
     pdf:
-      toc: true
+      toc: false
+      pagesize: A4
+      backcover: true
       template: resources/html/template.html
       pdf-engine: weasyprint
 

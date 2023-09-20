@@ -2,16 +2,6 @@
 /* CSS template for paged hazelnuts */
 /* --------------------------------- */
 
-/* -------------------- CSS variables ---------------------- */
-:root {
-    --running-title-width: 2.5in;
-    --screen-pages-spacing: 5mm;
-    --main-color: #724c25;
-    --secondary-color: #346aa0;
-    --main-font: "Gelasio";
-    --header-font: "Inter";
-  }
-
 /* ------------------------ Pages -------------------------- */
 /* page size */
 @page {
@@ -62,7 +52,7 @@
 @page:left {
 
     @top-center {
-      content: " | " string(h1-text);
+      content: " | " string(h2-text);
       font-family: var(--header-font);
       margin-left: -11cm;
       color: var(--main-color);

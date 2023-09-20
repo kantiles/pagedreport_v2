@@ -36,11 +36,10 @@
 }
 
 @page:first {
-  background-image:  linear-gradient(grey, grey), url(_extensions/pagedreport/resources/css/report-cover.jpg);
+  background-image:  url(_extensions/pagedreport/resources/css/report-cover.jpg);
   background-position: center;
   background-size: cover ;
   background-repeat: no-repeat;
-  background-blend-mode: multiply;
 
 }
 

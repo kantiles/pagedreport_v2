@@ -204,6 +204,17 @@ $endif$
     size: $if(pagesize)$$pagesize$$else$A4$endif$; 
 }
 
+/* ----- Fonts ----- */
+$if(headerfont)$
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $headerfont$;
+}
+$endif$
+
 /* ----- Setup back cover ----- */
 .back-cover {
     page: back-cover;
@@ -252,7 +263,11 @@ $endif$
 
 /* ----- Setting up CSS variables ----- */
 :root{
-    
+    --running-title-width: 2.5in;
+    --screen-pages-spacing: 5mm;
+    --main-color: $if(backgroundcolor)$$backgroundcolor$$else$#c78039$endif$;
+    --main-font: "Gelasio";
+    --header-font: "Inter";
 }
 
 /* ----- Adding external theme  ----- */

@@ -2,15 +2,6 @@
 /* CSS template for paged windmill */
 /* --------------------------------- */
 
-/* -------------------- CSS variables ---------------------- */
-:root {
-  --running-title-width: 2.5in;
-  --screen-pages-spacing: 5mm;
-  --main-color: $if(backgroundcolor)$$backgroundcolor$$else$#c78039$endif$;
-  --main-font: "Gelasio";
-  --header-font: "Inter";
-}
-
 /* ------------------------ Pages -------------------------- */
 /* page size */
 /* normal page */
