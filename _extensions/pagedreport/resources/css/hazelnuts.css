@@ -132,10 +132,6 @@
     background-size: 3cm, cover;
 }
 
-.back-cover {
-  page: back-cover;
-}
-
 /* ----------------------- Table of contents ----------------------- */
 .toc a {
   line-height: 30px;

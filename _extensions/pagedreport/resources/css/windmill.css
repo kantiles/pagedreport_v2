@@ -32,14 +32,15 @@
     font-weight: bold;
     color: var(--main-color);
     border-bottom: 5px solid blue;
-    width: 20cm;
+    width: 15cm;
     padding-left: 1.5cm;
   }
 
   @top-right {
-    content: string(h1-text);
+    content: string(h2-text);
     color: var(--main-color);
     border-bottom: 5px solid blue;
+    width: 6cm;
   }
 
   @top-right-corner {
@@ -55,7 +56,6 @@
   @bottom-right {
     content: counter(page);
     color: var(--main-color);
-    border: 5px solid var(--main-color);
     margin-left: 15cm;
     margin-right: -3cm;
     padding-left: 1cm;
@@ -72,7 +72,6 @@
   @bottom-left {
     content: counter(page);
     color: var(--main-color);
-    border: 5px solid var(--main-color);
     margin-right: 15cm;
     margin-left: -3cm;
     padding-right: 1cm;
@@ -85,10 +84,11 @@
 
 /* ------------------------ Front Cover --------------------- */
 @page: first {
-  background-color: red;
+  background: url(_extensions/pagedreport/resources/logo/dots-logo.svg), url(_extensions/pagedreport/resources/img/windmill-img.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-position: 15cm 23cm, 0cm 0cm;
-  background-size: 4cm, cover;
+  background-position: 35rem 58rem, 0cm 0cm;
+  background-size: 8rem, cover;
+  margin: 0;
 
   @top-left-corner {content: none;}
   @top-left {content: none;}
@@ -137,26 +137,20 @@
   background-size: 4cm;
 }
 
-.back-cover {
-  page: back-cover;
-}
 
 /* ------------------------ Fonts ---------------------------- */
-@import 'https://fonts.googleapis.com/css?family=Gelasio';
-@import 'https://fonts.googleapis.com/css?family=Inter';
-
 p,
 ul,
 a,
 ol {
-  font-family: var(--main-font);
+
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--header-font);
+
 }
 
 /* ------------------------ Style ----------------------------- */

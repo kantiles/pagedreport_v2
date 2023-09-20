@@ -270,10 +270,6 @@
     }
 }
 
-.back-cover {
-  page: back-cover;
-}
-
 /* ------------------------ Fonts ---------------------------- */
 @import 'https://fonts.googleapis.com/css?family=Gelasio';
 @import 'https://fonts.googleapis.com/css?family=Inter';

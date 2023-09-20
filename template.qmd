@@ -7,6 +7,7 @@ format:
   pagedreport-pdf:
     mainfont: "Figtree"
     toc: false
+    backcover: true
     theme:
       windmill: true
 ---
