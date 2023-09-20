@@ -7,9 +7,12 @@
 
 This is mainly three elements :
 
-- a YAML file that setup some defaults values
+- a YAML file that setup some defaults values (dev as SVG is a mandatory one - could be PNG if needed + prefer_html)
 - a custom HTML Pandoc template + partials (especially styles.html)
 - CSS templates
+
+Plus some hooks like : `knitr::opts_knit$set('rmarkdown.pandoc.to' = 'html')`
+/!\ not compatible with default `gt` style.
 
 Plus a documentation (below)
 

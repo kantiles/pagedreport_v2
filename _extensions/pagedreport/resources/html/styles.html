@@ -274,10 +274,14 @@ $endif$
 .back-cover {
     page: back-cover;
     color: white;
-    padding-top: 15cm;
+    padding-top: 18cm;
   }
 
-@page back-cover {
+.back-cover  > p{
+    font-size : 0.8rem;
+  }
+
+  @page back-cover {
     margin: 0;
     background: $if(backcover)$$backcover$$else$$maincolor$$endif$;
     background-repeat: no-repeat;
