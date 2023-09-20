@@ -209,7 +209,7 @@ $endif$
 
 /* headers + cover */
 .subtitle, .author, .date {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -246,11 +246,7 @@ $endif$
 /* ----- Setup first page ----- */
 
 @page:first {
-    margin: 0;
-    background: $if(cover)$$cover$$else$$maincolor$$endif$;
-    background-repeat: no-repeat;
-    background-position: 0cm 0cm;
-    background-size: cover;
+    background: $if(logo)$$logo$$endif$, $if(cover)$$cover$$else$coral$endif$;
 
     /* init to none */
     @top-left-corner {content: none;}

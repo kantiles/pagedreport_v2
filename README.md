@@ -35,17 +35,24 @@ Please note that size of elements aren't specifically adjusted for landscape mod
 
 - `maincolor``
 - `secondcolor`
+- `linkcolor`
+- `fontcolor`
+- `monobackgroundcolor`
+- `backgroundcolor`
 
 ### Fonts
 
 - `mainfont`: for everything. If no value this is the default system font.
 - `headerfont`: for header (from `h1` to `h5`) if not specified this takes `mainfont` value
+- `monofont`
 
 
 ### Sizes
 
 - `fontsize`
 - `linestretch`
+- `maxwidth`
+- `margin-left`/...
 
 ### Covers
 

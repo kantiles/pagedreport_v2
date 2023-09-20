@@ -12,10 +12,9 @@ format:
     mainfont: "Calibri"
     headerfont: "Figtree"
     fontsize: 14pt
-    maxwidth: 60em
     logo: url(https://kantiles.com/wp-content/uploads/2023/04/logo_kantiles_dark_bg-1.png)
-    cover: red
-    backcover: red
+    cover: url(https://img.freepik.com/photos-gratuite/texture-fond-mur-peinture-bleue_53876-14183.jpg)
+    backcover: lightblue
     backtext: >
       This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
       Finally, be sure to remove this message!

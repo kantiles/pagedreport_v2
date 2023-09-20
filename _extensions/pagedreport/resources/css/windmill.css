@@ -78,9 +78,8 @@
 
 /* ------------------------ Front Cover --------------------- */
 @page: first {
-  background: url(_extensions/pagedreport/resources/logo/dots-logo.svg), url(_extensions/pagedreport/resources/img/windmill-img.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-position: 35rem 58rem, 0cm 0cm;
+  background-position: 15cm 23cm, 0cm 0cm;
   background-size: 8rem, cover;
   margin: 0;
 
@@ -94,13 +93,20 @@
 }
 
 /* headers */
-.title {}
+.title {
+  margin-right: 3cm;
+}
 
 .subtitle {}
 
-.author {}
+.author {
+  margin-top: 13cm;
+  margin-right: 7cm;
+}
 
-.date {}
+.date {
+  margin-right: 7cm;
+}
 
 
 /* ------------------------ Style ----------------------------- */
